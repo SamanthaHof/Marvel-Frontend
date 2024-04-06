@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 
 // Import Pages
-import Characters from "./pages/Characters";
-import Comics from "./pages/Comics";
+import Personnages from "./pages/Personnages.jsx";
+import Comics from "./pages/Comics.jsx";
+import home from "./pages/home.jsx";
+import personnage from "./pages/personnage.jsx";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path="/" element={<Characters />} />
+              <Route path="/" element={<Personnages />} />
+              <Route path="/Comics" element={<Comics />} />
             </Routes>
           </main>
         </div>

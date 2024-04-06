@@ -3,15 +3,23 @@ import logo from "../assets/img/logo.png";
 
 const Header = () => {
   return (
-    <div className="header">
-      <Link to={"/"}>
-        <img src={logo} alt="" />
-      </Link>
-      <div className="left-header">
-        <Link to={"/Characters"}>Characters</Link>
-        <Link to={"/Comics"}>Comics</Link>
+    <header>
+      {" "}
+      <div className="header">
+        <Link to={"/"}>
+          <img src={logo} alt="" />
+        </Link>
+        <div className="left-header">
+          <Link to={"/Personnages"}>
+            <button>Personnages</button>
+          </Link>
+          <Link to={"/Comics"}>
+            <button>Comics</button>
+          </Link>
+          <button>Favoris</button>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

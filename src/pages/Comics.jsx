@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const Comics = () => {
   const [comicsData, setComicsData] = useState(null);
-  const [loading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
 
   useEffect(() => {
