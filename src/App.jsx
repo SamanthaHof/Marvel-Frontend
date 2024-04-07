@@ -6,16 +6,15 @@ import { useState } from "react";
 import NavBar from "./components/NavBar";
 
 // Import Pages
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home.jsx";
 import Characters from "./pages/Characters.jsx";
 import Comics from "./pages/Comics.jsx";
 import Favoris from "./pages/Fovori.jsx";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [favoris, setFavoris] = useState([]); // Déclaration de l'état pour stocker les favoris
+  const [favoris, setFavoris] = useState([]);
 
-  // Fonction pour ajouter un personnage aux favoris
   const addToFavoris = (character) => {
     setFavoris([...favoris, character]);
   };
