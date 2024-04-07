@@ -1,0 +1,32 @@
+/* Character.jsx */
+.Character {
+  flex: 1 0 calc(25% - 15px); /* Pour afficher 4 personnages par ligne avec 20px d'espace fixe entre eux */
+  max-width: calc(
+    25% - 15px
+  ); /* Ajustez la largeur du personnage selon vos besoins */
+}
+
+.character-item {
+  background-color: #f0f0f0; /* Couleur de fond pour chaque personnage */
+  border-radius: 5px; /* Coins arrondis pour chaque personnage */
+  overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+.character-image {
+  width: 100%; /* Pour s'assurer que l'image remplit complètement son conteneur */
+  height: auto; /* Pour maintenir les proportions de l'image */
+}
+
+.character-details {
+  padding: 10px; /* Espacement autour des détails du personnage */
+}
+
+.character-details h3 {
+  margin-top: 0; /* Supprime la marge supérieure du titre */
+  font-weight: bold; /* Texte en gras pour le titre */
+}
+
+.character-details p {
+  margin-top: 5px; /* Espacement entre le titre et la description */
+  color: #333; /* Couleur du texte de la description */
+}

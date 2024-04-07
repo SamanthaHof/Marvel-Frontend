@@ -1,16 +1,12 @@
-import Personnages from "./Personnages";
-import Comics from "./Comics";
+import Characters from "./Characters";
 
 const Home = () => {
   return (
     <>
       <div className="container">
         <div className="centre">
-          <Personnages />
-
-          <div className="centre">
-            <COmics />
-          </div>
+          <h1>Bienvenue chez Marvel !</h1>
+          <Characters />
         </div>
       </div>
     </>

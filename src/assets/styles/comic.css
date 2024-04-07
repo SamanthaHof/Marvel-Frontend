@@ -1,0 +1,32 @@
+/* Comic.jsx */
+.Comic {
+  flex: 1 0 calc(25% - 15px); /* Pour afficher 4 comics par ligne avec 20px d'espace fixe entre eux */
+  max-width: calc(
+    25% - 15px
+  ); /* Ajustez la largeur du comic selon vos besoins */
+}
+
+.comic-item {
+  background-color: #f0f0f0; /* Couleur de fond pour chaque comic */
+  border-radius: 5px; /* Coins arrondis pour chaque comic */
+  overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+.comic-image {
+  width: 100%; /* Pour s'assurer que l'image remplit complètement son conteneur */
+  height: auto; /* Pour maintenir les proportions de l'image */
+}
+
+.comic-details {
+  padding: 10px; /* Espacement autour des détails du comic */
+}
+
+.comic-details h3 {
+  margin-top: 0; /* Supprime la marge supérieure du titre */
+  font-weight: bold; /* Texte en gras pour le titre */
+}
+
+.comic-details p {
+  margin-top: 5px; /* Espacement entre le titre et la description */
+  color: #333; /* Couleur du texte de la description */
+}

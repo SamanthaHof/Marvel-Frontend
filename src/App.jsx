@@ -1,30 +1,45 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 // Import Components
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 
 // Import Pages
-import Personnages from "./pages/Personnages.jsx";
+import Home from "./pages/Home.jsx";
+import Characters from "./pages/Characters.jsx";
 import Comics from "./pages/Comics.jsx";
-import home from "./pages/home.jsx";
-import personnage from "./pages/personnage.jsx";
+import Favoris from "./pages/Fovori.jsx";
 
 function App() {
+  const [search, setSearch] = useState("");
+  const [favoris, setFavoris] = useState([]); // Déclaration de l'état pour stocker les favoris
+
+  // Fonction pour ajouter un personnage aux favoris
+  const addToFavoris = (character) => {
+    setFavoris([...favoris, character]);
+  };
+
   return (
-    <>
-      <Router>
-        <div className="container">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<Personnages />} />
-              <Route path="/Comics" element={<Comics />} />
-            </Routes>
-          </main>
-        </div>
-      </Router>
-    </>
+    <Router>
+      <NavBar setSearch={setSearch} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/personnages"
+          element={
+            <Characters
+              search={search}
+              setSearch={setSearch}
+              addToFavoris={addToFavoris}
+            />
+          } // Passage de la fonction addToFavoris en tant que prop
+        />
+        <Route path="/comics" element={<Comics />} />
+        <Route path="/favoris" element={<Favoris favoris={favoris} />} />{" "}
+        {/* Ajout de la route pour la page Favoris */}
+      </Routes>
+    </Router>
   );
 }
 
